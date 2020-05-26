@@ -1,9 +1,12 @@
 from django.shortcuts import render
-from .serializers import PostsSerializer
-from .models import Post
+from .serializers import PersonSerializer,ProfessionSerializer
+from .models import Person,Profession
 from rest_framework import viewsets
 
-# Create your views here.
-class PostViewSets(viewsets.ModelViewSet):
-    serializer_class = PostsSerializer
-    queryset = Post.objects.all()
+class PersonViewSets(viewsets.ModelViewSet):
+    serializer_class = PersonSerializer
+    queryset = Person.objects.all()
+
+class ProfessionViewSets(viewsets.ModelViewSet):
+    serializer_class = ProfessionSerializer
+    queryset = Profession.objects.all()
