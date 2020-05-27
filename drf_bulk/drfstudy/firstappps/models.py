@@ -19,4 +19,5 @@ class Person(models.Model):
     Profession = models.ForeignKey(Profession, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.first_name 
+        return self.first_name
+

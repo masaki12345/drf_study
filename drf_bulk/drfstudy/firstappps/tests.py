@@ -15,3 +15,4 @@ class RegistrationTestCase(APITestCase):
         response = self.client.post("/profession/",data)
         print(data)
         self.assertEqual(response.status_code,status.HTTP_201_CREATED)
+
